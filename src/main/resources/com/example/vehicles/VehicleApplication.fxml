@@ -6,23 +6,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicles.VehicleController">
    <children>
-      <Label layoutX="61.0" layoutY="31.0" prefHeight="26.0" prefWidth="66.0" text="Year" />
-      <Label layoutX="61.0" layoutY="96.0" prefHeight="26.0" prefWidth="66.0" text="Make" />
-      <Label layoutX="61.0" layoutY="154.0" prefHeight="26.0" prefWidth="66.0" text="Model" />
-      <Label layoutX="61.0" layoutY="212.0" prefHeight="26.0" prefWidth="66.0" text="Fuel/Power" />
-      <Label layoutX="290.0" layoutY="154.0" prefHeight="26.0" prefWidth="66.0" text="Cylinders" />
-      <Label layoutX="290.0" layoutY="31.0" prefHeight="26.0" prefWidth="66.0" text="Type" />
-      <Label layoutX="290.0" layoutY="96.0" prefHeight="26.0" prefWidth="66.0" text="Color" />
-      <Button layoutX="132.0" layoutY="308.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="236.0" text="Create Vehicle" />
-      <ComboBox layoutX="60.0" layoutY="57.0" prefWidth="150.0" promptText="Year" />
-      <ComboBox layoutX="60.0" layoutY="238.0" prefWidth="150.0" promptText="Fuel/Power" />
-      <ComboBox layoutX="290.0" layoutY="57.0" prefWidth="150.0" promptText="Vehicle Type" />
-      <TextField layoutX="60.0" layoutY="122.0" prefHeight="26.0" prefWidth="150.0" />
-      <TextField layoutX="62.0" layoutY="180.0" prefHeight="26.0" prefWidth="150.0" />
-      <ComboBox layoutX="290.0" layoutY="122.0" prefWidth="150.0" promptText="Vehicle Color" />
-      <ComboBox layoutX="290.0" layoutY="180.0" prefWidth="150.0" />
+      <Label layoutX="87.0" layoutY="14.0" prefHeight="26.0" prefWidth="66.0" text="Year" />
+      <Label layoutX="87.0" layoutY="79.0" prefHeight="26.0" prefWidth="66.0" text="Make" />
+      <Label layoutX="87.0" layoutY="137.0" prefHeight="26.0" prefWidth="66.0" text="Model" />
+      <Label layoutX="30.0" layoutY="270.0" prefHeight="26.0" prefWidth="66.0" text="Fuel/Power" />
+      <Label fx:id="cylLabel" layoutX="189.0" layoutY="269.0" prefHeight="26.0" prefWidth="66.0" text="Cylinders" />
+      <Label layoutX="30.0" layoutY="206.0" prefHeight="26.0" prefWidth="66.0" text="Type" />
+      <Label layoutX="352.0" layoutY="206.0" prefHeight="26.0" prefWidth="66.0" text="Color" />
+      <TextField fx:id="yearTF" layoutX="83.0" layoutY="39.0" prefHeight="26.0" prefWidth="330.0" promptText="Year" />
+      <TextField fx:id="makeTF" layoutX="83.0" layoutY="105.0" prefHeight="26.0" prefWidth="330.0" promptText="Make" />
+      <TextField fx:id="modelTF" layoutX="83.0" layoutY="163.0" prefHeight="26.0" prefWidth="330.0" promptText="Model" />
+      <ComboBox fx:id="typeCB" layoutX="30.0" layoutY="232.0" onAction="#Select" prefHeight="26.0" prefWidth="122.0" promptText="Vehicle Type" />
+      <ComboBox fx:id="axleCB" layoutX="189.0" layoutY="232.0" prefHeight="26.0" prefWidth="122.0" promptText="Axles" />
+      <ComboBox fx:id="colorCB" layoutX="352.0" layoutY="232.0" prefHeight="26.0" prefWidth="122.0" promptText="Vehicle Color" />
+      <ComboBox fx:id="fuelCB" layoutX="30.0" layoutY="296.0" onAction="#Select" prefHeight="26.0" prefWidth="122.0" promptText="Fuel/Power" />
+      <ComboBox fx:id="cylCB" layoutX="189.0" layoutY="295.0" prefHeight="26.0" prefWidth="122.0" promptText="Cylinders" />
+      <ComboBox fx:id="wheelCB" layoutX="352.0" layoutY="296.0" prefHeight="26.0" prefWidth="122.0" promptText="Wheels" />
+      <Label layoutX="352.0" layoutY="270.0" prefHeight="26.0" prefWidth="66.0" text="Wheels" />
+      <Label fx:id="axleLabel" layoutX="189.0" layoutY="206.0" prefHeight="26.0" prefWidth="66.0" text="Axles" />
+      <Button fx:id="nextBtn" layoutX="118.0" layoutY="341.0" mnemonicParsing="false" onAction="#onNextBtnClick" prefHeight="26.0" prefWidth="236.0" text="Next" />
+      <Label fx:id="yearErrorLabel" alignment="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="4.0" prefWidth="197.0" textFill="#e41313" />
    </children>
 </AnchorPane>
